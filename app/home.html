@@ -3,140 +3,165 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#090a08" />
-    <meta
-      name="description"
-      content="AI DROP 聚合全球 AI 影像、设计、开发与艺术创作活动，帮创作者赶在灵感与截止日期之前。"
-    />
-    <title>AI DROP — AI 创作活动雷达</title>
+    <title>CALL//AI — AI 创作活动索引</title>
   </head>
   <body>
-    <div class="noise" aria-hidden="true"></div>
-    <div class="cursor-dot" aria-hidden="true"></div>
-    <div class="cursor-ring" aria-hidden="true"></div>
+    <div class="paper-noise" aria-hidden="true"></div>
+    <div class="cursor-cross" aria-hidden="true"><i></i><b></b></div>
 
-    <header class="site-header">
-      <a class="brand magnetic" href="#top" aria-label="AI DROP 首页">
-        <span>AI</span><b>DROP</b><i>®</i>
+    <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="CALL AI 首页">
+        <b>CALL</b><i>//</i><b>AI</b>
       </a>
-      <nav aria-label="主导航">
-        <a href="#drops">活动雷达</a>
-        <a href="#method">收录标准</a>
+      <p>AI 创作活动索引<br /><span>CURATED IN SHANGHAI</span></p>
+      <nav>
+        <a href="#index">活动索引</a>
+        <a href="#standard">收录标准</a>
       </nav>
-      <a class="header-action magnetic" href="#submit">投递活动 <span>↗</span></a>
+      <a class="submit-mini" href="#submit">投递活动 ↗</a>
     </header>
 
     <main>
       <section class="hero" id="top">
-        <div class="hero-media" aria-hidden="true">
-          <img src="/assets/hero-portal.png" alt="" />
-          <div class="hero-scan"></div>
+        <div class="issue-label">
+          <span>ISSUE</span>
+          <strong>07—30</strong>
+          <small>2026</small>
         </div>
-        <div class="hero-orbit orbit-one" aria-hidden="true">CREATE / COMPETE / EXPLORE /</div>
-        <div class="hero-orbit orbit-two" aria-hidden="true">FILM / IMAGE / CODE / MUSIC /</div>
 
-        <div class="hero-content">
-          <p class="eyebrow reveal">全球 AI 创作机会情报站 <span>• 2026</span></p>
-          <h1 aria-label="别让好灵感错过截止日期">
-            <span class="reveal">别让好灵感</span>
-            <span class="outline reveal">错过截止日期。</span>
-          </h1>
-          <div class="hero-bottom reveal">
-            <p>搜集平台、软件与公司发起的 AI 影像、设计、开发和艺术活动。只留下值得你动手的。</p>
-            <a class="primary-cta magnetic" href="#drops">
-              <span>开始搜寻</span>
-              <b>↓</b>
-            </a>
+        <div class="hero-title" aria-label="Open Calls">
+          <div class="title-line line-open">
+            <span class="title-no">01</span>
+            <h1>OPEN</h1>
+            <p>别刷灵感了。<br />去做一个作品。</p>
+          </div>
+          <div class="title-line line-calls">
+            <div class="live-stamp">
+              <i></i>
+              <span><b id="heroCount">06</b> CALLS<br />ARE LIVE</span>
+            </div>
+            <h1>CALLS</h1>
           </div>
         </div>
 
-        <div class="hero-index" aria-hidden="true">
-          <span>LIVE SIGNAL</span>
-          <b>07 — 30</b>
+        <div class="hero-foot">
+          <p class="hero-intro">
+            搜集平台、软件与公司发起的 AI 影像、设计、开发和艺术征集。
+            <b>每周人工筛选，只留下值得你动手的。</b>
+          </p>
+          <a class="round-link" href="#index" aria-label="查看活动索引">
+            <span>VIEW<br />INDEX</span>
+            <b>↓</b>
+          </a>
+          <div class="deadline-flip">
+            <span>NEXT DEADLINE</span>
+            <div><b>0</b><b>1</b></div>
+            <small>DAYS LEFT</small>
+          </div>
+        </div>
+
+        <div class="hero-poster" aria-hidden="true">
+          <span>MAKE</span>
+          <span>IT</span>
+          <span>REAL.</span>
+          <i>AI CREATIVE OPEN CALLS / 2026</i>
         </div>
       </section>
 
-      <section class="ticker" aria-label="活动类型">
-        <div class="ticker-track">
-          <span>AI FILM</span><i>✦</i><span>VIBE CODING</span><i>✦</i><span>GENERATIVE ART</span><i>✦</i>
-          <span>GAME DESIGN</span><i>✦</i><span>AI FOR GOOD</span><i>✦</i><span>AI FILM</span><i>✦</i>
-          <span>VIBE CODING</span><i>✦</i><span>GENERATIVE ART</span><i>✦</i><span>GAME DESIGN</span><i>✦</i>
+      <div class="marquee" aria-hidden="true">
+        <div>
+          <span>FILM</span><i>✳</i><span>DESIGN</span><i>✳</i><span>CODE</span><i>✳</i>
+          <span>GAMES</span><i>✳</i><span>ART</span><i>✳</i><span>STORY</span><i>✳</i>
+          <span>FILM</span><i>✳</i><span>DESIGN</span><i>✳</i><span>CODE</span><i>✳</i>
+          <span>GAMES</span><i>✳</i><span>ART</span><i>✳</i><span>STORY</span><i>✳</i>
         </div>
-      </section>
+      </div>
 
-      <section class="drops" id="drops">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">01 / OPEN CALLS</p>
-            <h2>正在发生的<br />创作机会</h2>
-          </div>
-          <div class="section-meta">
-            <p>不是信息瀑布，是一份经过筛选的行动清单。</p>
-            <div class="live-count"><i></i><span id="liveCount">06</span> 个机会在线</div>
-          </div>
+      <section class="index-section" id="index">
+        <div class="index-heading">
+          <p>01 / DEADLINE INDEX</p>
+          <h2>正在征集</h2>
+          <div class="index-note">按截止日期排序<br />点击前往官方页面</div>
         </div>
 
-        <div class="filter-row" role="toolbar" aria-label="活动筛选">
-          <div class="filters">
-            <button class="filter active" data-filter="all">全部</button>
+        <div class="index-tools">
+          <div class="filters" role="toolbar" aria-label="活动分类">
+            <button class="filter active" data-filter="all">全部 <sup>06</sup></button>
             <button class="filter" data-filter="影像">影像</button>
             <button class="filter" data-filter="设计">设计</button>
             <button class="filter" data-filter="开发">开发</button>
             <button class="filter" data-filter="公益">公益</button>
           </div>
           <label class="search">
-            <span>⌕</span>
-            <input id="searchInput" type="search" placeholder="搜索活动 / 主办方" />
+            <span>SEARCH</span>
+            <input id="searchInput" type="search" placeholder="输入活动或主办方…" />
           </label>
         </div>
 
+        <div class="event-head" aria-hidden="true">
+          <span>截止</span><span>活动 / 主办方</span><span>类型</span><span>奖励</span><span>状态</span><span></span>
+        </div>
         <div class="event-list" id="eventList"></div>
         <div class="empty-state" id="emptyState" hidden>
-          <span>NO SIGNAL</span>
-          <p>没有匹配的活动，换个关键词试试。</p>
+          <b>∅</b><span>没有匹配的活动</span>
+        </div>
+
+        <div class="hover-poster" id="hoverPoster" aria-hidden="true">
+          <span class="poster-type"></span>
+          <strong class="poster-title"></strong>
+          <small class="poster-host"></small>
+          <i>CALL//AI</i>
         </div>
       </section>
 
-      <section class="manifesto" id="method">
-        <div class="manifesto-sticky">
-          <p class="section-kicker">02 / THE FILTER</p>
-          <h2>少一点噪音。<br /><em>多一点开工。</em></h2>
+      <section class="editorial-break">
+        <p>NO MORE<br />“SAVE FOR LATER.”</p>
+        <div>
+          <span>灵感不会过期，</span>
+          <b>活动会。</b>
         </div>
-        <div class="manifesto-points">
+      </section>
+
+      <section class="standards" id="standard">
+        <div class="standards-title">
+          <p>02 / EDITORIAL POLICY</p>
+          <h2>我们不做<br />信息搬运。</h2>
+        </div>
+        <div class="standards-list">
           <article>
-            <span>01</span>
-            <h3>信息可核验</h3>
-            <p>活动名称、主办方、截止日期和奖励均指向官方页面；状态按日期更新。</p>
+            <b>01</b>
+            <h3>必须真的能参加</h3>
+            <p>有清楚的官方页面、截止日期与提交方式。模糊预热、二手转述和失效链接不收。</p>
           </article>
           <article>
-            <span>02</span>
-            <h3>创作者优先</h3>
-            <p>只收录真正需要“做出作品”的机会，不把普通峰会和营销直播塞进来。</p>
+            <b>02</b>
+            <h3>必须真的要创作</h3>
+            <p>作品形式可以是影像、设计、代码或艺术，但不能只是报名听会、转发抽奖。</p>
           </article>
           <article>
-            <span>03</span>
-            <h3>一眼能决策</h3>
-            <p>用赛道、门槛、奖励与剩余时间回答最重要的问题：它值不值得你参加？</p>
+            <b>03</b>
+            <h3>必须一眼能决定</h3>
+            <p>截止日、门槛、奖励、赛道排在最前面，让你在十秒内决定参加还是略过。</p>
           </article>
         </div>
       </section>
 
-      <section class="submit" id="submit">
-        <div class="submit-glow" aria-hidden="true"></div>
-        <p class="section-kicker">03 / SHARE A SIGNAL</p>
-        <h2>发现了一个<br />值得被看见的活动？</h2>
-        <a class="submit-link magnetic" href="mailto:hello@aidrop.example?subject=投递AI创作活动">
-          <span>投递活动线索</span><b>↗</b>
-        </a>
-        <p class="submit-note">提供官方链接即可。我们会核对日期、参赛资格和作品要求。</p>
+      <section class="submit-section" id="submit">
+        <p>03 / SHARE A CALL</p>
+        <h2>有人正在等<br />这个机会。</h2>
+        <div class="submit-bottom">
+          <p>发现值得收录的 AI 创作活动？<br />把官方链接交给我们。</p>
+          <a href="mailto:hello@call-ai.example?subject=投递AI创作活动">
+            <span>投递活动线索</span><b>↗</b>
+          </a>
+        </div>
       </section>
     </main>
 
     <footer>
-      <a class="brand" href="#top"><span>AI</span><b>DROP</b><i>®</i></a>
-      <p>MAKE SOMETHING BEFORE IT CLOSES.</p>
-      <p>© 2026 / CURATED WITH HUMAN JUDGMENT</p>
+      <a class="wordmark" href="#top"><b>CALL</b><i>//</i><b>AI</b></a>
+      <p>MAKE SOMETHING<br />BEFORE IT CLOSES.</p>
+      <p>SHANGHAI / CHINA<br />© 2026</p>
     </footer>
-
   </body>
 </html>
