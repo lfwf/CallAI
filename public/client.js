@@ -1,5 +1,3 @@
-import "./style.css";
-
 const events = [
   {
     id: "tencent-game",
