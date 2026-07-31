@@ -1,7 +1,9 @@
 node_modules/
 dist/
 .next/
+.vinext/
 next-env.d.ts
 *.log
 artifacts/
 tmp/
+public/events.json

@@ -5,7 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vinext dev",
-    "build": "vinext build && node scripts/copy-hosting.mjs",
+    "events:validate": "node scripts/prepare-events.mjs --check",
+    "events:check-links": "node scripts/prepare-events.mjs --check-links",
+    "events:prepare": "node scripts/prepare-events.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:ui": "node tests/ui.mjs",
+    "build": "node scripts/prepare-events.mjs --check-links && node scripts/prepare-events.mjs && vinext build && node scripts/copy-hosting.mjs",
     "start": "vinext start"
   },
   "dependencies": {
@@ -16,6 +21,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-rsc": "^0.5.32",
+    "playwright-core": "^1.62.1",
     "vite": "^8.2.0"
   }
 }
