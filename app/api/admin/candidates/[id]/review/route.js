@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import reviews from "../../../../../content/reviews.json";
+import reviews from "../../../../../../content/reviews.json";
 
 export async function POST(request, { params }) {
   const { id } = await params;

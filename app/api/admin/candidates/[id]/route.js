@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
-import candidates from "../../../../../content/candidates.json";
+import candidateData from "../../../../../content/candidates.json";
+
+const candidates = candidateData.candidates || [];
 
 export async function GET(request, { params }) {
-  const candidate = candidates.find((item) => item.id === params.id);
+  const { id } = await params;
+  const candidate = candidates.find((item) => item.id === id);
 
   if (!candidate) {
     return NextResponse.json({ error: "not found" }, { status: 404 });
@@ -12,11 +15,12 @@ export async function GET(request, { params }) {
 }
 
 export async function PATCH(request, { params }) {
+  const { id } = await params;
   const body = await request.json();
 
   return NextResponse.json({
     success: true,
-    id: params.id,
+    id,
     update: body
   });
 }

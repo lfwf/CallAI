@@ -1,5 +1,7 @@
-import candidates from "../../../../content/candidates.json";
+import candidateData from "../../../../content/candidates.json";
 import styles from "./page.module.css";
+
+const candidates = candidateData.candidates || [];
 
 const statusLabel = {
   discovered: "发现",

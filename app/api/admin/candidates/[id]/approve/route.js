@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import candidates from "../../../../../content/candidates.json";
+import candidateData from "../../../../../../content/candidates.json";
+
+const candidates = candidateData.candidates || [];
 
 export async function POST(request, { params }) {
   const { id } = await params;
