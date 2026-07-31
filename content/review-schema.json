@@ -1,0 +1,16 @@
+{
+  "candidateId": "",
+  "status": "reviewing",
+  "review": {
+    "credibility": 0,
+    "industryValue": 0,
+    "rewardValue": 0,
+    "beginnerFriendly": 0,
+    "difficulty": "",
+    "editorNote": "",
+    "risks": [],
+    "recommendation": ""
+  },
+  "operator": "",
+  "updatedAt": ""
+}
