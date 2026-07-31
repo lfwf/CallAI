@@ -734,7 +734,7 @@ button { cursor: pointer; }
 
 .detail-main {
   --event-accent: var(--accent);
-  width: min(1180px, calc(100% - 36px));
+  width: min(1320px, calc(100% - 36px));
   margin: 0 auto;
   padding: 34px 0 72px;
 }
@@ -877,19 +877,11 @@ button { cursor: pointer; }
 .detail-primary-actions button:hover { background: var(--surface-2); }
 
 .detail-layout {
-  display: grid;
-  grid-template-columns: 190px minmax(0, 760px);
-  justify-content: space-between;
-  gap: 72px;
+  display: block;
 }
 
 .detail-nav {
-  position: sticky;
-  top: 96px;
-  align-self: start;
-  display: grid;
-  gap: 2px;
-  margin-top: 48px;
+  display: none;
 }
 
 .detail-nav a {
@@ -901,8 +893,17 @@ button { cursor: pointer; }
 
 .detail-nav a:hover { color: var(--accent-dark); }
 
+.detail-content {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: 24px;
+  align-items: start;
+}
+
 .detail-section {
-  padding: 52px 0;
+  min-width: 0;
+  padding: 38px 0 32px;
+  border-top: 1px solid var(--line-strong);
   border-bottom: 1px solid var(--line-strong);
   scroll-margin-top: 82px;
 }
@@ -915,28 +916,29 @@ button { cursor: pointer; }
 }
 
 .detail-section > h2 {
-  margin: 0 0 28px;
-  font-size: 38px;
+  margin: 0 0 22px;
+  font-size: 30px;
   line-height: 1.12;
 }
 
 .detail-summary {
   max-width: 700px;
   margin: 0;
-  font-size: 17px;
-  line-height: 1.8;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 .detail-facts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 30px 0 0;
+  grid-template-columns: 1fr;
+  margin: 24px 0 0;
   border-top: 1px solid var(--line);
 }
 
 .detail-facts div {
   min-width: 0;
-  padding: 18px 14px 0 0;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .detail-facts dt {
@@ -972,8 +974,8 @@ button { cursor: pointer; }
   position: relative;
   display: grid;
   grid-template-columns: 40px 1fr;
-  gap: 24px;
-  padding-bottom: 32px;
+  gap: 16px;
+  padding-bottom: 16px;
 }
 
 .detail-timeline li > span {
@@ -991,12 +993,12 @@ button { cursor: pointer; }
 
 .detail-timeline h3 {
   margin: 1px 0 7px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .detail-timeline p {
   margin: 0;
-  font: 500 13px/1.6 "DM Mono", monospace;
+  font: 500 11px/1.6 "DM Mono", monospace;
 }
 
 .detail-timeline small {
@@ -1017,16 +1019,16 @@ button { cursor: pointer; }
 
 .prize-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 8px;
 }
 
 .prize-list article {
-  min-height: 170px;
+  min-height: 0;
   display: grid;
   grid-template-columns: 28px 1fr;
   gap: 12px;
-  padding: 22px;
+  padding: 14px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 253, 248, .72);
@@ -1038,7 +1040,7 @@ button { cursor: pointer; }
 }
 
 .prize-list h3 {
-  margin: 0 0 14px;
+  margin: 0 0 7px;
   color: var(--muted);
   font-size: 12px;
   font-weight: 500;
@@ -1046,12 +1048,12 @@ button { cursor: pointer; }
 
 .prize-list strong {
   display: block;
-  font-size: 22px;
+  font-size: 16px;
   line-height: 1.35;
 }
 
 .prize-list p {
-  margin: 12px 0 0;
+  margin: 7px 0 0;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.65;
@@ -1066,7 +1068,7 @@ button { cursor: pointer; }
 
 .requirement-list li {
   position: relative;
-  padding: 18px 16px 18px 34px;
+  padding: 14px 12px 14px 30px;
   border-bottom: 1px solid var(--line);
   font-size: 14px;
   line-height: 1.75;
@@ -1081,6 +1083,7 @@ button { cursor: pointer; }
 }
 
 .detail-source {
+  grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -1258,9 +1261,10 @@ button { cursor: pointer; }
   .sort-control { margin-left: 0; }
   .event-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .detail-layout {
-    grid-template-columns: 150px minmax(0, 1fr);
-    gap: 44px;
+    display: block;
   }
+  .detail-nav { display: none; }
+  .detail-content { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .detail-hero-grid {
     grid-template-columns: minmax(0, 1fr) minmax(330px, .9fr);
     gap: 32px;
@@ -1313,6 +1317,7 @@ button { cursor: pointer; }
   .detail-primary-actions button { padding-inline: 10px; font-size: 12px; }
   .detail-layout { display: block; }
   .detail-nav { display: none; }
+  .detail-content { grid-template-columns: 1fr; }
   .detail-section { padding: 38px 0; }
   .detail-section > h2 { margin-bottom: 20px; font-size: 29px; }
   .detail-summary { font-size: 15px; line-height: 1.8; }
