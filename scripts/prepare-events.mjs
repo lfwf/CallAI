@@ -10,6 +10,7 @@ const required = [
   "languages", "featured", "visual", "verifiedAt", "createdAt"
 ];
 const isoWithZone = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?(?:Z|[+-]\d{2}:\d{2})$/;
+const scheduleDate = /^\d{4}-\d{2}(?:-\d{2}(?:T\d{2}:\d{2}(:\d{2})?(?:Z|[+-]\d{2}:\d{2}))?)?$/;
 
 export function validateEvents(events) {
   const errors = [];
@@ -40,6 +41,34 @@ export function validateEvents(events) {
     if (!Array.isArray(event.categories) || event.categories.length === 0) errors.push(`${at}.categories 不能为空`);
     if (!["online", "offline", "hybrid"].includes(event.mode)) errors.push(`${at}.mode 非法`);
     if (!event.visual?.background || !event.visual?.ink || !event.visual?.accent) errors.push(`${at}.visual 配色不完整`);
+    if (event.schedule !== undefined) {
+      if (!Array.isArray(event.schedule) || event.schedule.length === 0) {
+        errors.push(`${at}.schedule 必须是非空数组`);
+      } else {
+        for (const [scheduleIndex, item] of event.schedule.entries()) {
+          if (!item.label || !item.start) errors.push(`${at}.schedule[${scheduleIndex}] 缺少 label 或 start`);
+          for (const field of ["start", "end"]) {
+            if (item[field] && !scheduleDate.test(item[field])) {
+              errors.push(`${at}.schedule[${scheduleIndex}].${field} 日期格式非法`);
+            }
+          }
+        }
+      }
+    }
+    if (event.prizes !== undefined) {
+      if (!Array.isArray(event.prizes) || event.prizes.length === 0) {
+        errors.push(`${at}.prizes 必须是非空数组`);
+      } else {
+        for (const [prizeIndex, prize] of event.prizes.entries()) {
+          if (!prize.title || !prize.value) errors.push(`${at}.prizes[${prizeIndex}] 缺少 title 或 value`);
+        }
+      }
+    }
+    if (event.requirements !== undefined
+      && (!Array.isArray(event.requirements) || event.requirements.length === 0
+        || event.requirements.some((item) => typeof item !== "string" || !item.trim()))) {
+      errors.push(`${at}.requirements 必须是非空字符串数组`);
+    }
   }
   return errors;
 }

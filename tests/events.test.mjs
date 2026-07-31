@@ -28,7 +28,7 @@ test("status boundaries: 8 days, 7 days, 1 day, today and expired", () => {
   assert.equal(getEventStatus("2026-08-08T12:00:01Z", now).key, "open");
   assert.equal(getEventStatus("2026-08-07T12:00:00Z", now).key, "urgent");
   assert.equal(getEventStatus("2026-08-01T12:00:00Z", now).days, 1);
-  assert.equal(getEventStatus("2026-07-31T18:00:00Z", now).label, "今天截止");
+  assert.equal(getEventStatus("2026-07-31T15:00:00Z", now).label, "今天截止");
   assert.equal(getEventStatus("2026-07-31T11:59:59Z", now).key, "closed");
 });
 
@@ -48,4 +48,12 @@ test("ICS includes title, official URL, UTC dates and reminder", () => {
   assert.match(ics, /URL:https/);
   assert.match(ics, /提前 7 天/);
   assert.match(ics, /BEGIN:VALARM/);
+});
+
+test("Future Sound Awards includes structured timeline, prizes and requirements", () => {
+  const event = events.find((item) => item.id === "future-sound-awards-2026");
+  assert.equal(event.schedule.length, 6);
+  assert.equal(event.prizes.length, 4);
+  assert.ok(event.requirements.length >= 3);
+  assert.match(event.prizes[0].value, /10,000/);
 });

@@ -6,12 +6,9 @@ export function getEventStatus(deadline, now = new Date()) {
   const remaining = end.getTime() - now.getTime();
   if (remaining < 0) return { key: "closed", label: "已截止", days: -1 };
   const days = Math.ceil(remaining / DAY);
-  const zone = deadline.match(/(Z|[+-]\d{2}:\d{2})$/)?.[1] || "Z";
-  const offsetMinutes = zone === "Z"
-    ? 0
-    : (zone.startsWith("-") ? -1 : 1) * (Number(zone.slice(1, 3)) * 60 + Number(zone.slice(4, 6)));
-  const localNow = new Date(now.getTime() + offsetMinutes * 60_000).toISOString().slice(0, 10);
-  if (localNow === deadline.slice(0, 10)) return { key: "urgent", label: "今天截止", days: 0 };
+  const beijingNow = new Date(now.getTime() + 8 * 60 * 60_000).toISOString().slice(0, 10);
+  const beijingDeadline = new Date(end.getTime() + 8 * 60 * 60_000).toISOString().slice(0, 10);
+  if (beijingNow === beijingDeadline) return { key: "urgent", label: "今天截止", days: 0 };
   if (days <= 7) return { key: "urgent", label: `${days} 天后截止`, days };
   return { key: "open", label: "征集中", days };
 }

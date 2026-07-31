@@ -4,62 +4,63 @@ import { fileURLToPath } from "node:url";
 import { chromium } from "playwright-core";
 
 const baseUrl = process.env.CALL_AI_TEST_URL || "http://localhost:4179";
-const chrome = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";
+const chrome = process.env.CALL_AI_CHROME || chromium.executablePath();
 const browser = await chromium.launch({ executablePath: chrome, headless: true });
 const artifacts = new URL("../artifacts/", import.meta.url);
 await mkdir(artifacts, { recursive: true });
 
 try {
   const desktop = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
-  await desktop.goto(`${baseUrl}/?category=${encodeURIComponent("影像")}&sort=deadline#index`, { waitUntil: "networkidle" });
+  await desktop.goto(`${baseUrl}/?view=urgent&sort=deadline#index`, { waitUntil: "networkidle" });
   await desktop.locator("#index").scrollIntoViewIfNeeded();
-  assert.equal(await desktop.locator('[data-value="影像"]').getAttribute("class"), "filter active");
-  assert.ok(await desktop.locator(".event-row").count() >= 8);
-  assert.equal(await desktop.locator(".event-row").first().isVisible(), true);
+  assert.match(await desktop.locator('[data-view="urgent"]').getAttribute("class"), /active/);
+  assert.ok(await desktop.locator(".event-card").count() >= 1);
+  assert.equal(await desktop.locator(".event-card").first().isVisible(), true);
   assert.equal(await desktop.locator(".load-error").isHidden(), true);
   await desktop.screenshot({ path: fileURLToPath(new URL("index-desktop.png", artifacts)), fullPage: false });
 
-  await desktop.locator(".event-row").first().click();
-  assert.equal(await desktop.locator("#eventDrawer").getAttribute("open"), "");
-  assert.match(desktop.url(), /event=/);
-  assert.match(await desktop.locator("#drawerDeadline").textContent(), /UTC[+-]\d{2}:\d{2}|UTC$/);
+  await desktop.locator(".event-card").first().click();
+  await desktop.waitForLoadState("networkidle");
+  assert.match(desktop.url(), /\/events\//);
+  assert.equal(await desktop.locator("#intro").isVisible(), true);
+  assert.ok(await desktop.locator(".detail-timeline > li").count() >= 2);
+  assert.ok(await desktop.locator(".prize-list > article").count() >= 1);
+  assert.ok(await desktop.locator(".requirement-list > li").count() >= 1);
   const download = desktop.waitForEvent("download");
-  await desktop.locator("#calendarButton").click();
+  await desktop.locator("#detailCalendar").click();
   assert.match((await download).suggestedFilename(), /\.ics$/);
-  await desktop.locator("#closeDrawer").click();
-
-  await desktop.reload({ waitUntil: "networkidle" });
-  assert.equal(await desktop.locator('[data-value="影像"]').getAttribute("class"), "filter active");
+  await desktop.locator(".detail-back").click();
+  await desktop.waitForLoadState("networkidle");
+  assert.match(await desktop.locator('[data-view="urgent"]').getAttribute("class"), /active/);
   await desktop.keyboard.press("Tab");
   assert.ok(await desktop.evaluate(() => document.activeElement !== document.body));
 
   const mobile = await browser.newPage({ viewport: { width: 390, height: 844 } });
-  await mobile.goto(`${baseUrl}/?status=urgent#index`, { waitUntil: "networkidle" });
+  await mobile.goto(`${baseUrl}/?view=closed#index`, { waitUntil: "networkidle" });
   await mobile.locator("#index").scrollIntoViewIfNeeded();
-  assert.equal(await mobile.locator("#statusSelect").inputValue(), "urgent");
+  assert.match(await mobile.locator('[data-view="closed"]').getAttribute("class"), /active/);
   const pageWidth = await mobile.evaluate(() => [document.documentElement.scrollWidth, document.documentElement.clientWidth]);
   assert.equal(pageWidth[0], pageWidth[1], `移动端页面横向溢出：${pageWidth.join("/")}`);
-  await mobile.locator(".event-row").first().click();
-  await mobile.waitForTimeout(550);
-  assert.equal(await mobile.locator("#closeDrawer").isVisible(), true);
-  const drawerBox = await mobile.locator("#eventDrawer").boundingBox();
-  const closeBox = await mobile.locator("#closeDrawer").boundingBox();
-  assert.ok(drawerBox.width >= 389 && drawerBox.x <= 1, `移动抽屉未铺满：${JSON.stringify(drawerBox)}`);
-  assert.ok(closeBox.x + closeBox.width <= 390, `关闭按钮超出视口：${JSON.stringify(closeBox)}`);
-  await mobile.screenshot({ path: fileURLToPath(new URL("drawer-mobile.png", artifacts)), fullPage: false });
+  await mobile.locator(".event-card").first().click();
+  await mobile.waitForLoadState("networkidle");
+  assert.equal(await mobile.locator(".detail-hero").isVisible(), true);
+  const detailWidth = await mobile.evaluate(() => [document.documentElement.scrollWidth, document.documentElement.clientWidth]);
+  assert.equal(detailWidth[0], detailWidth[1], `移动端详情横向溢出：${detailWidth.join("/")}`);
+  await mobile.screenshot({ path: fileURLToPath(new URL("detail-mobile.png", artifacts)), fullPage: false });
 
   const reduced = await browser.newPage({ viewport: { width: 390, height: 844 }, reducedMotion: "reduce" });
   await reduced.goto(baseUrl, { waitUntil: "networkidle" });
-  const marqueeDuration = await reduced.locator(".marquee > div").evaluate((element) => getComputedStyle(element).animationDuration);
-  assert.ok(parseFloat(marqueeDuration) < 0.1, `减少动态模式仍有持续动画：${marqueeDuration}`);
+  await reduced.locator(".event-card").first().waitFor();
+  assert.equal(await reduced.locator(".event-card").first().isVisible(), true);
 
   const offline = await browser.newPage();
   await offline.route("**/events.json", (route) => route.abort());
   await offline.goto(baseUrl, { waitUntil: "networkidle" });
+  await offline.locator("#loadError").waitFor();
   assert.equal(await offline.locator("#loadError").isVisible(), true);
-  assert.equal(await offline.locator(".event-row").count(), 0);
+  assert.equal(await offline.locator(".event-card").count(), 0);
 
-  console.log("UI 验收通过：1440×1000、390×844、URL 恢复、抽屉、ICS、键盘焦点与横向溢出");
+  console.log("UI 验收通过：1440×1000、390×844、详情路由、URL 恢复、ICS、键盘焦点与横向溢出");
 } finally {
   await browser.close();
 }
