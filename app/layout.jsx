@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="zh-CN">
       <body>
         {children}
-        <script src="/client.js" defer />
+        <script src="/client.js" type="module" />
       </body>
     </html>
   );

@@ -10,158 +10,116 @@
     <div class="cursor-cross" aria-hidden="true"><i></i><b></b></div>
 
     <header class="topbar">
-      <a class="wordmark" href="#top" aria-label="CALL AI 首页">
-        <b>CALL</b><i>//</i><b>AI</b>
-      </a>
-      <p>AI 创作活动索引<br /><span>CURATED IN SHANGHAI</span></p>
-      <nav>
-        <a href="#index">活动索引</a>
-        <a href="#standard">收录标准</a>
-      </nav>
+      <a class="wordmark" href="#top" aria-label="CALL AI 首页"><b>CALL</b><i>//</i><b>AI</b></a>
+      <p>AI 创作活动索引<br /><span>OFFICIAL SOURCES ONLY</span></p>
+      <nav><a href="#index">活动索引</a><a href="#standard">收录标准</a></nav>
       <a class="submit-mini" href="#submit">投递活动 ↗</a>
     </header>
 
     <main>
       <section class="hero" id="top">
-        <div class="issue-label">
-          <span>ISSUE</span>
-          <strong>07—30</strong>
-          <small>2026</small>
-        </div>
-
+        <div class="issue-label"><span>ISSUE</span><strong id="issueDate">07—31</strong><small>2026</small></div>
         <div class="hero-title" aria-label="Open Calls">
-          <div class="title-line line-open">
-            <span class="title-no">01</span>
-            <h1>OPEN</h1>
-            <p>别刷灵感了。<br />去做一个作品。</p>
-          </div>
+          <div class="title-line line-open"><span class="title-no">01</span><h1>OPEN</h1><p>别刷灵感了。<br />去做一个作品。</p></div>
           <div class="title-line line-calls">
-            <div class="live-stamp">
-              <i></i>
-              <span><b id="heroCount">06</b> CALLS<br />ARE LIVE</span>
-            </div>
+            <div class="live-stamp"><i></i><span><b id="heroCount">--</b> CALLS<br />ARE LIVE</span></div>
             <h1>CALLS</h1>
           </div>
         </div>
-
         <div class="hero-foot">
-          <p class="hero-intro">
-            搜集平台、软件与公司发起的 AI 影像、设计、开发和艺术征集。
-            <b>每周人工筛选，只留下值得你动手的。</b>
-          </p>
-          <a class="round-link" href="#index" aria-label="查看活动索引">
-            <span>VIEW<br />INDEX</span>
-            <b>↓</b>
-          </a>
-          <div class="deadline-flip">
-            <span>NEXT DEADLINE</span>
-            <div><b>0</b><b>1</b></div>
-            <small>DAYS LEFT</small>
+          <p class="hero-intro">核验平台、软件与公司发起的 AI 创作征集。<b>没有实时幻觉：每条活动标注来源与最后核验时间。</b></p>
+          <a class="round-link" href="#index" aria-label="查看活动索引"><span>VIEW<br />INDEX</span><b>↓</b></a>
+          <div class="deadline-flip" aria-label="最近活动截止倒计时">
+            <span>NEXT DEADLINE</span><div><b>–</b><b>–</b></div><small>DAYS LEFT</small>
           </div>
         </div>
-
-        <div class="hero-poster" aria-hidden="true">
-          <span>MAKE</span>
-          <span>IT</span>
-          <span>REAL.</span>
-          <i>AI CREATIVE OPEN CALLS / 2026</i>
-        </div>
+        <div class="hero-poster" aria-hidden="true"><span>MAKE</span><span>IT</span><span>REAL.</span><i>AI CREATIVE OPEN CALLS / 2026</i></div>
       </section>
 
-      <div class="marquee" aria-hidden="true">
-        <div>
-          <span>FILM</span><i>✳</i><span>DESIGN</span><i>✳</i><span>CODE</span><i>✳</i>
-          <span>GAMES</span><i>✳</i><span>ART</span><i>✳</i><span>STORY</span><i>✳</i>
-          <span>FILM</span><i>✳</i><span>DESIGN</span><i>✳</i><span>CODE</span><i>✳</i>
-          <span>GAMES</span><i>✳</i><span>ART</span><i>✳</i><span>STORY</span><i>✳</i>
-        </div>
-      </div>
+      <div class="marquee" aria-hidden="true"><div>
+        <span>FILM</span><i>✳</i><span>DESIGN</span><i>✳</i><span>CODE</span><i>✳</i><span>GAMES</span><i>✳</i><span>SOCIAL GOOD</span><i>✳</i><span>MUSIC</span><i>✳</i>
+        <span>FILM</span><i>✳</i><span>DESIGN</span><i>✳</i><span>CODE</span><i>✳</i><span>GAMES</span><i>✳</i><span>SOCIAL GOOD</span><i>✳</i><span>MUSIC</span><i>✳</i>
+      </div></div>
 
       <section class="index-section" id="index">
         <div class="index-heading">
-          <p>01 / DEADLINE INDEX</p>
-          <h2>正在征集</h2>
-          <div class="index-note">按截止日期排序<br />点击前往官方页面</div>
+          <p>01 / VERIFIED DEADLINES</p>
+          <h2 id="viewTitle">全部活动</h2>
+          <div class="index-note"><b id="totalCount">--</b> 条已核验<br /><b id="urgentCount">--</b> 条即将截止<br /><span id="updatedAt">数据读取中</span></div>
+        </div>
+
+        <div class="view-switch" role="tablist" aria-label="活动视图">
+          <button class="view-tab" data-view="new" role="tab">本周新收录 <sup id="newCount">0</sup></button>
+          <button class="view-tab" data-view="urgent" role="tab">即将截止 <sup id="viewUrgentCount">0</sup></button>
+          <button class="view-tab active" data-view="all" role="tab">全部活动 <sup id="allCount">0</sup></button>
         </div>
 
         <div class="index-tools">
-          <div class="filters" role="toolbar" aria-label="活动分类">
-            <button class="filter active" data-filter="all">全部 <sup>06</sup></button>
-            <button class="filter" data-filter="影像">影像</button>
-            <button class="filter" data-filter="设计">设计</button>
-            <button class="filter" data-filter="开发">开发</button>
-            <button class="filter" data-filter="公益">公益</button>
+          <div class="filters" id="categoryFilters" role="toolbar" aria-label="活动分类">
+            <button class="filter active" data-value="">全部分类</button>
+            <button class="filter" data-value="影像">影像</button>
+            <button class="filter" data-value="设计">设计</button>
+            <button class="filter" data-value="开发">开发</button>
+            <button class="filter" data-value="游戏">游戏</button>
+            <button class="filter" data-value="公益">公益</button>
+            <button class="filter" data-value="音乐">音乐</button>
           </div>
-          <label class="search">
-            <span>SEARCH</span>
-            <input id="searchInput" type="search" placeholder="输入活动或主办方…" />
-          </label>
+          <label class="search"><span>SEARCH</span><input id="searchInput" type="search" placeholder="活动 / 主办方…" autocomplete="off" /></label>
         </div>
 
-        <div class="event-head" aria-hidden="true">
-          <span>截止</span><span>活动 / 主办方</span><span>类型</span><span>奖励</span><span>状态</span><span></span>
+        <div class="secondary-tools">
+          <label>状态<select id="statusSelect"><option value="">全部</option><option value="open">征集中</option><option value="urgent">七天内</option><option value="closed">已截止</option></select></label>
+          <label>参与方式<select id="modeSelect"><option value="">全部</option><option value="online">线上</option><option value="offline">线下</option><option value="hybrid">混合</option></select></label>
+          <label>地区<select id="regionSelect"><option value="">全部地区</option><option value="全球">全球</option><option value="中国大陆">中国大陆</option></select></label>
+          <label class="sort-control">排序<select id="sortSelect"><option value="deadline">最早截止</option><option value="newest">最新收录</option><option value="reward">奖励优先</option></select></label>
+          <button class="clear-filters" id="clearFilters">清除筛选 ×</button>
         </div>
-        <div class="event-list" id="eventList"></div>
-        <div class="empty-state" id="emptyState" hidden>
-          <b>∅</b><span>没有匹配的活动</span>
-        </div>
+
+        <div class="date-rail" id="dateRail" aria-hidden="true"><span>DEADLINE</span><b id="railDate">—</b><i></i></div>
+        <div class="event-head" aria-hidden="true"><span>截止</span><span>活动 / 主办方</span><span>类型</span><span>奖励</span><span>状态</span><span></span></div>
+        <div class="event-list" id="eventList" aria-live="polite" aria-busy="true"></div>
+        <div class="empty-state" id="emptyState" hidden><b>∅</b><span>没有匹配的活动。试试清除筛选。</span></div>
+        <div class="load-error" id="loadError" hidden role="alert"><b>DATA / OFFLINE</b><p>活动数据加载失败。我们不会用虚假的空列表掩盖错误。</p><button id="retryLoad">重新加载</button></div>
 
         <div class="hover-poster" id="hoverPoster" aria-hidden="true">
-          <span class="poster-type"></span>
-          <strong class="poster-title"></strong>
-          <small class="poster-host"></small>
-          <i>CALL//AI</i>
+          <span class="poster-type"></span><strong class="poster-title"></strong><small class="poster-host"></small>
+          <b class="poster-days"></b><i>CALL//AI</i>
         </div>
       </section>
 
-      <section class="editorial-break">
-        <p>NO MORE<br />“SAVE FOR LATER.”</p>
-        <div>
-          <span>灵感不会过期，</span>
-          <b>活动会。</b>
-        </div>
-      </section>
+      <section class="editorial-break"><p>DON’T<br />BOOKMARK.</p><div><span>收藏不会交稿，</span><b>日历会提醒。</b></div></section>
 
       <section class="standards" id="standard">
-        <div class="standards-title">
-          <p>02 / EDITORIAL POLICY</p>
-          <h2>我们不做<br />信息搬运。</h2>
-        </div>
+        <div class="standards-title"><p>02 / EDITORIAL POLICY</p><h2>不是聚合。<br />是核验。</h2></div>
         <div class="standards-list">
-          <article>
-            <b>01</b>
-            <h3>必须真的能参加</h3>
-            <p>有清楚的官方页面、截止日期与提交方式。模糊预热、二手转述和失效链接不收。</p>
-          </article>
-          <article>
-            <b>02</b>
-            <h3>必须真的要创作</h3>
-            <p>作品形式可以是影像、设计、代码或艺术，但不能只是报名听会、转发抽奖。</p>
-          </article>
-          <article>
-            <b>03</b>
-            <h3>必须一眼能决定</h3>
-            <p>截止日、门槛、奖励、赛道排在最前面，让你在十秒内决定参加还是略过。</p>
-          </article>
+          <article><b>01</b><h3>只认官方来源</h3><p>官方活动页、官方赛事平台或主办方公告。二手转述只作线索，不作为发布依据。</p></article>
+          <article><b>02</b><h3>状态由时间计算</h3><p>征集中、七天内、今天截止与历史区全部根据带时区的截止时间生成，不手工写死。</p></article>
+          <article><b>03</b><h3>不确定就留空</h3><p>没有明确奖励、资格或语言说明时不做推测。每条记录保留来源和最后核验时间。</p></article>
         </div>
       </section>
 
       <section class="submit-section" id="submit">
-        <p>03 / SHARE A CALL</p>
-        <h2>有人正在等<br />这个机会。</h2>
-        <div class="submit-bottom">
-          <p>发现值得收录的 AI 创作活动？<br />把官方链接交给我们。</p>
-          <a href="mailto:hello@call-ai.example?subject=投递AI创作活动">
-            <span>投递活动线索</span><b>↗</b>
-          </a>
-        </div>
+        <p>03 / SHARE A CALL</p><h2>有人正在等<br />这个机会。</h2>
+        <div class="submit-bottom"><p>发现值得收录的 AI 创作活动？<br />请只提交官方链接。</p><a href="mailto:hello@call-ai.example?subject=投递AI创作活动"><span>投递活动线索</span><b>↗</b></a></div>
       </section>
     </main>
 
-    <footer>
-      <a class="wordmark" href="#top"><b>CALL</b><i>//</i><b>AI</b></a>
-      <p>MAKE SOMETHING<br />BEFORE IT CLOSES.</p>
-      <p>SHANGHAI / CHINA<br />© 2026</p>
-    </footer>
+    <dialog class="event-drawer" id="eventDrawer" aria-labelledby="drawerTitle">
+      <div class="drawer-bar"><span>CALL DETAIL / VERIFIED SOURCE</span><button id="closeDrawer" aria-label="关闭详情">关闭 ×</button></div>
+      <div class="drawer-poster" id="drawerPoster"><span id="drawerCategory"></span><strong id="drawerPosterTitle"></strong><i>CALL//AI</i></div>
+      <div class="drawer-content">
+        <p class="drawer-host" id="drawerHost"></p><h2 id="drawerTitle"></h2><p class="drawer-subtitle" id="drawerSubtitle"></p>
+        <div class="drawer-deadline"><span>DEADLINE / LOCAL TIMEZONE</span><b id="drawerDeadline"></b><small id="drawerStatus"></small></div>
+        <dl id="drawerFacts"></dl>
+        <p class="drawer-format" id="drawerFormat"></p>
+        <p class="drawer-verified" id="drawerVerified"></p>
+        <div class="drawer-actions">
+          <a id="officialLink" target="_blank" rel="noreferrer">官方报名 ↗</a>
+          <button id="calendarButton">加入日历 · 提前 7 天</button>
+        </div>
+      </div>
+    </dialog>
+
+    <footer><a class="wordmark" href="#top"><b>CALL</b><i>//</i><b>AI</b></a><p>MAKE SOMETHING<br />BEFORE IT CLOSES.</p><p>SHANGHAI / CHINA<br />© 2026</p></footer>
   </body>
 </html>
