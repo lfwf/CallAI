@@ -1,0 +1,9 @@
+[
+  {
+    "id": "review-demo",
+    "candidateId": "demo",
+    "action": "created",
+    "operator": "system",
+    "createdAt": "2026-07-31T00:00:00+08:00"
+  }
+]
