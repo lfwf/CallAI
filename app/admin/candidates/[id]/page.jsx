@@ -22,54 +22,37 @@ export default async function CandidateDetailPage({ params }) {
         <h1>{candidate.title}</h1>
         <span>{statusLabel[candidate.status] || candidate.status}</span>
       </header>
-
       <div className={styles.grid}>
         <section className={styles.card}>
           <h2>来源信息</h2>
-          <Field title="来源" value={candidate.source} />
-          <Field title="来源链接" value={candidate.sourceUrl} />
-          <Field title="发现时间" value={candidate.discoveredAt} />
+          <Field title="来源" value={candidate.source}/>
+          <Field title="链接" value={candidate.sourceUrl}/>
+          <Field title="发现时间" value={candidate.discoveredAt}/>
         </section>
-
         <section className={styles.card}>
-          <h2>活动信息</h2>
-          <input defaultValue={candidate.title || ""} placeholder="活动标题" />
-          <input defaultValue={candidate.organizer || ""} placeholder="主办方" />
-          <input defaultValue={candidate.officialUrl || ""} placeholder="官方地址" />
-          <input defaultValue={candidate.deadline || ""} placeholder="截止时间" />
+          <h2>审核字段</h2>
+          <input name="organizer" defaultValue={candidate.organizer || ""} placeholder="主办方"/>
+          <input name="officialUrl" defaultValue={candidate.officialUrl || ""} placeholder="官方地址"/>
+          <input name="deadline" defaultValue={candidate.deadline || ""} placeholder="截止时间"/>
         </section>
       </div>
-
-      <div className={styles.grid}>
-        <section className={styles.card}>
-          <h2>编辑判断</h2>
-          <input placeholder="适合人群" />
-          <textarea placeholder="推荐理由" />
-          <textarea placeholder="风险提示" />
-        </section>
-
-        <section className={styles.card}>
-          <h2>评分</h2>
-          <input placeholder="可信度 1-5" />
-          <input placeholder="行业价值 1-5" />
-          <input placeholder="新人友好 1-5" />
-          <input placeholder="参与难度 1-5" />
-        </section>
-      </div>
-
       <section className={styles.card}>
-        <h2>审核操作</h2>
+        <h2>编辑判断</h2>
+        <textarea placeholder="适合人群"/>
+        <textarea placeholder="推荐理由"/>
+        <textarea placeholder="风险提示"/>
+      </section>
+      <section className={styles.card}>
+        <h2>评分</h2>
+        <p>可信度 / 行业价值 / 新人友好 / 参与难度</p>
         <div className={styles.actions}>
           <button>保存审核</button>
           <button>通过并生成草稿</button>
           <button className={styles.reject}>拒绝</button>
         </div>
-        <p className={styles.note}>下一步接入 API，实现字段保存、审核记录和正式活动生成。</p>
       </section>
     </main>
   );
 }
 
-function Field({ title, value }) {
-  return <p><b>{title}</b>：{value || "未填写"}</p>;
-}
+function Field({ title, value }) { return <p><b>{title}</b>：{value || "未填写"}</p>; }
