@@ -1,7 +1,7 @@
 {
   "name": "ai-activity-radar",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "scripts": {
     "dev": "vinext dev",
@@ -10,12 +10,17 @@
     "events:prepare": "node scripts/prepare-events.mjs",
     "sources:validate": "node scripts/prepare-sources.mjs --check",
     "sources:prepare": "node scripts/prepare-sources.mjs",
+    "candidates:validate": "node scripts/prepare-candidates.mjs --check",
+    "candidates:list": "node scripts/candidate-queue.mjs list",
+    "candidates:add": "node scripts/candidate-queue.mjs add",
+    "candidates:status": "node scripts/candidate-queue.mjs set-status",
+    "candidates:remove": "node scripts/candidate-queue.mjs remove",
     "intelligence:report": "node scripts/intelligence-report.mjs",
-    "data:validate": "npm run events:validate && npm run sources:validate",
+    "data:validate": "npm run events:validate && npm run sources:validate && npm run candidates:validate",
     "data:prepare": "npm run events:prepare && npm run sources:prepare",
     "test": "node --test tests/*.test.mjs",
     "test:ui": "node tests/ui.mjs",
-    "build": "node scripts/prepare-events.mjs --check-links && npm run sources:validate && npm run data:prepare && vinext build && node scripts/copy-hosting.mjs",
+    "build": "node scripts/prepare-events.mjs --check-links && npm run sources:validate && npm run candidates:validate && npm run data:prepare && vinext build && node scripts/copy-hosting.mjs",
     "start": "vinext start"
   },
   "dependencies": {
