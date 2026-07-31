@@ -18,13 +18,37 @@ CALL//AI 是一个可追溯到官方来源的 AI 赛事、黑客松、创作机�
 
 ## 数据目录
 
-- `content/events.json`：正式活动数据库
 - `content/sources.json`：来源登记表与扫描优先级
+- `content/candidates.json`：自动发现、人工投稿和二手线索的候选审核队列
+- `content/events.json`：完成官方核验后公开发布的正式活动数据库
 - `public/events.json`：构建时生成的前端活动数据
 - `public/sources.json`：构建时生成的启用来源数据
 - `docs/editorial-policy.md`：收录、核验与推荐规范
+- `docs/candidate-workflow.md`：候选活动审核流程
 
 不要直接编辑 `public/events.json` 或 `public/sources.json`。
+
+## 候选审核队列
+
+任何自动发现、用户投稿或二手平台线索都必须先进入 `content/candidates.json`，不能直接写入正式活动库。
+
+```text
+discovered → reviewing → ready → events.json
+                    ↘ needs-source
+                    ↘ rejected
+```
+
+只有具备官方来源、明确主办方和截止时间，并且 `confidence=verified` 的候选才能进入 `ready`。
+
+常用命令：
+
+```powershell
+npm run candidates:add -- --id example-2026 --title "Example AI Challenge" --url https://example.com --priority high
+npm run candidates:list
+npm run candidates:list -- --status reviewing
+npm run candidates:status -- --id example-2026 --status reviewing
+npm run candidates:validate
+```
 
 ## 活动维护原则
 
@@ -76,6 +100,8 @@ CALL//AI 是一个可追溯到官方来源的 AI 赛事、黑客松、创作机�
 npm run events:validate
 npm run events:check-links
 npm run sources:validate
+npm run candidates:validate
+npm run data:validate
 npm run data:prepare
 npm run intelligence:report
 npm test
@@ -84,13 +110,14 @@ npm run build
 
 `npm run intelligence:report` 会输出：
 
-- 活动和来源数量
+- 活动、候选和来源数量
+- 候选状态分布与高优先级审核项
 - 字段完整率
 - 超过 14 天未核验的活动
 - 未来 7 天截止的活动
 - 字段补全队列
 
-`npm run build` 会执行活动链接审计、来源库校验、数据生成和前端构建。链接失效、日期无时区、重复 ID、来源缺失或字段不完整时会失败。
+`npm run build` 会执行活动链接审计、来源库校验、候选队列校验、数据生成和前端构建。链接失效、日期无时区、重复 ID、来源缺失或字段不完整时会失败。
 
 ## URL 接口
 
