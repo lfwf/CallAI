@@ -44,7 +44,7 @@
     "featured": true,
     "format": "AI 电影作品，具体时长与技术要求见官方规则。",
     "visual": {"background": "#f0442f", "ink": "#eeeade", "accent": "#11110f"},
-    "verifiedAt": "2026-07-31T07:45:00+08:00",
+    "verifiedAt": "2026-08-01T08:31:44+08:00",
     "createdAt": "2026-07-30T22:05:00+08:00"
   },
   {
@@ -328,6 +328,27 @@
     "visual": {"background": "#c8b6ff", "ink": "#11110f", "accent": "#2447ff"},
     "verifiedAt": "2026-07-31T08:45:00+08:00",
     "createdAt": "2026-07-31T08:45:00+08:00"
+  },
+  {
+    "id": "hack-the-arts-2026",
+    "title": "HACK THE ARTS",
+    "subtitle": "Create Art That Couldn’t Exist Without Technology",
+    "organizer": "Hack the Arts",
+    "officialUrl": "https://hackthearts.devpost.com/",
+    "sourceUrl": "https://hackthearts.devpost.com/rules",
+    "categories": ["设计", "开发"],
+    "mode": "online",
+    "regions": ["全球"],
+    "eligibility": "全球高中生；13–18 岁，可个人参赛或最多 4 人组队。",
+    "submissionStart": "2026-07-01T00:00:00-04:00",
+    "deadline": "2026-08-01T23:45:00-04:00",
+    "reward": {"label": "1000 美元现金 + 其他奖项", "amount": 1000, "currency": "USD"},
+    "languages": ["英文"],
+    "featured": true,
+    "format": "提交交互式、生成式或计算艺术项目，需包含可运行演示、公开代码仓库与项目说明。",
+    "visual": {"background": "#f3a9c0", "ink": "#11110f", "accent": "#2447ff"},
+    "verifiedAt": "2026-08-01T08:31:44+08:00",
+    "createdAt": "2026-08-01T08:31:44+08:00"
   },
   {
     "id": "trae-ai-creativity-contest-2026",
