@@ -1,10 +1,20 @@
 import assert from "node:assert/strict";
 import { mkdir } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright-core";
 
 const baseUrl = process.env.CALL_AI_TEST_URL || "http://localhost:4179";
-const chrome = process.env.CALL_AI_CHROME || chromium.executablePath();
+const systemBrowsers = [
+  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "/usr/bin/google-chrome",
+  "/usr/bin/chromium"
+];
+const chrome = process.env.CALL_AI_CHROME
+  || systemBrowsers.find((candidate) => existsSync(candidate))
+  || chromium.executablePath();
 const browser = await chromium.launch({ executablePath: chrome, headless: true });
 const artifacts = new URL("../artifacts/", import.meta.url);
 await mkdir(artifacts, { recursive: true });

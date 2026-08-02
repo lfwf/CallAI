@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { verifyAdminAccount } from '@/lib/auth/simple-auth';
+import { verifyAdminAccount } from '../../../../lib/auth/simple-auth.js';
 
 export async function POST(request) {
   const { username, password } = await request.json();
