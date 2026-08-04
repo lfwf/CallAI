@@ -35,7 +35,7 @@
     "regions": ["全球"],
     "eligibility": "面向全球创作者，作品须符合官方 AI 影像规则。",
     "submissionStart": "2026-05-25T00:00:00+05:00",
-    "deadline": "2026-08-15T23:59:59+05:00",
+    "deadline": "2026-08-31T23:59:59+05:00",
     "eventStart": "2026-10-01",
     "eventEnd": "2026-10-03",
     "resultDate": "2026-09-15",
@@ -44,7 +44,7 @@
     "featured": true,
     "format": "AI 电影作品，具体时长与技术要求见官方规则。",
     "visual": {"background": "#f0442f", "ink": "#eeeade", "accent": "#11110f"},
-    "verifiedAt": "2026-08-01T08:31:44+08:00",
+    "verifiedAt": "2026-08-03T08:31:37+08:00",
     "createdAt": "2026-07-30T22:05:00+08:00"
   },
   {

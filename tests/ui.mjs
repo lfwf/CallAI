@@ -21,9 +21,9 @@ await mkdir(artifacts, { recursive: true });
 
 try {
   const desktop = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
-  await desktop.goto(`${baseUrl}/?view=urgent&sort=deadline#index`, { waitUntil: "networkidle" });
+  await desktop.goto(`${baseUrl}/?view=all&sort=deadline#index`, { waitUntil: "networkidle" });
   await desktop.locator("#index").scrollIntoViewIfNeeded();
-  assert.match(await desktop.locator('[data-view="urgent"]').getAttribute("class"), /active/);
+  assert.match(await desktop.locator('[data-view="all"]').getAttribute("class"), /active/);
   assert.ok(await desktop.locator(".event-card").count() >= 1);
   assert.equal(await desktop.locator(".event-card").first().isVisible(), true);
   assert.equal(await desktop.locator(".load-error").isHidden(), true);
@@ -41,7 +41,7 @@ try {
   assert.match((await download).suggestedFilename(), /\.ics$/);
   await desktop.locator(".detail-back").click();
   await desktop.waitForLoadState("networkidle");
-  assert.match(await desktop.locator('[data-view="urgent"]').getAttribute("class"), /active/);
+  assert.match(await desktop.locator('[data-view="all"]').getAttribute("class"), /active/);
   await desktop.keyboard.press("Tab");
   assert.ok(await desktop.evaluate(() => document.activeElement !== document.body));
 

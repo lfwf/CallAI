@@ -1,4 +1,35 @@
 {
-  "updatedAt": "2026-07-31T13:30:00+08:00",
-  "candidates": []
+  "updatedAt": "2026-08-04T00:32:16.446Z",
+  "candidates": [
+    {
+      "id": "austin-ai-film-festival-2026",
+      "title": "Austin AI Film Festival 2026",
+      "discoveredAt": "2026-08-03T00:33:12.293Z",
+      "discoveredFrom": "https://www.austinaifilmfestival.com/",
+      "officialUrl": "https://www.austinaifilmfestival.com/",
+      "sourceUrl": "https://www.austinaifilmfestival.com/",
+      "organizer": "Austin AI Film Festival",
+      "deadline": "",
+      "status": "needs-source",
+      "confidence": "pending",
+      "priority": "high",
+      "reviewNote": "官方页确认 2026-08-15 截止、11 个赛道及主要创作规则，但未公布截止时刻和时区，暂不进入正式库。",
+      "lastCheckedAt": "2026-08-04T00:30:29.538Z"
+    },
+    {
+      "id": "ai-yes-international-youth-2026",
+      "title": "AI YES International Youth AI Competition",
+      "discoveredAt": "2026-08-04T00:32:15.971Z",
+      "discoveredFrom": "https://ai-yes-competition-30441.devpost.com/",
+      "officialUrl": "https://ai-yes-competition-30441.devpost.com/",
+      "sourceUrl": "https://ai-yes-competition-30441.devpost.com/rules",
+      "organizer": "International AI Youth Education Society",
+      "deadline": "2026-09-01T12:00:00-07:00",
+      "status": "needs-source",
+      "confidence": "pending",
+      "priority": "high",
+      "reviewNote": "Devpost 确认 13–18 岁学生、四个 AI 创作赛道、非现金证书奖及精确截止时区；但页面同时出现必须 2–5 人组队与可个人参赛的冲突，需主办方澄清后再发布。",
+      "lastCheckedAt": "2026-08-04T00:30:29.538Z"
+    }
+  ]
 }
