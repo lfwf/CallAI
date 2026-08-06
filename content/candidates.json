@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-04T00:32:16.446Z",
+  "updatedAt": "2026-08-05T00:32:38.799Z",
   "candidates": [
     {
       "id": "austin-ai-film-festival-2026",
@@ -30,6 +30,21 @@
       "priority": "high",
       "reviewNote": "Devpost 确认 13–18 岁学生、四个 AI 创作赛道、非现金证书奖及精确截止时区；但页面同时出现必须 2–5 人组队与可个人参赛的冲突，需主办方澄清后再发布。",
       "lastCheckedAt": "2026-08-04T00:30:29.538Z"
+    },
+    {
+      "id": "asia-ai-film-festival-2026",
+      "title": "Asia AI Film Festival 2026",
+      "discoveredAt": "2026-08-05T00:32:38.362Z",
+      "discoveredFrom": "https://aaff.iacst.org/",
+      "officialUrl": "https://aaff.iacst.org/",
+      "sourceUrl": "https://aaff.iacst.org/",
+      "organizer": "Asia AI Film Festival",
+      "deadline": "",
+      "status": "needs-source",
+      "confidence": "pending",
+      "priority": "normal",
+      "reviewNote": "官方页确认 2026-08-25 截止、全球 AI 电影征集、7 个奖项、10 美元报名费及提交规格，但未公布截止时刻和时区，暂不进入正式库。",
+      "lastCheckedAt": "2026-08-05T00:31:22.800Z"
     }
   ]
 }
