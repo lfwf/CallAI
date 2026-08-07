@@ -546,5 +546,28 @@
     "visual": {"background": "#f3a9c0", "ink": "#11110f", "accent": "#2447ff"},
     "verifiedAt": "2026-07-31T10:58:00+08:00",
     "createdAt": "2026-07-30T22:25:00+08:00"
+  },
+  {
+    "id": "hacksocial-2026",
+    "title": "HACKSOCIAL 2026",
+    "subtitle": "Hack the Change Again",
+    "organizer": "Hacksocial",
+    "officialUrl": "https://hacksocial2026.devpost.com/",
+    "sourceUrl": "https://hacksocial2026.devpost.com/rules",
+    "categories": ["开发", "公益"],
+    "mode": "online",
+    "regions": ["全球"],
+    "eligibility": "面向全球 13 岁以上高中、大学及研究生；仅限学生，个人或 1–4 人团队参赛。",
+    "submissionStart": "2026-08-01T00:00:00-04:00",
+    "deadline": "2026-08-31T17:00:00-04:00",
+    "eventStart": "2026-08-01",
+    "eventEnd": "2026-08-31",
+    "reward": {"label": "3979 美元以上赞助权益与奖品", "amount": null, "currency": "USD"},
+    "languages": ["英文"],
+    "featured": false,
+    "format": "围绕现实问题提交可评估的技术或创意项目，需包含项目说明，以及代码、演示视频、在线链接或源代码仓库等评审材料。",
+    "visual": {"background": "#b5e7c2", "ink": "#11110f", "accent": "#f0442f"},
+    "verifiedAt": "2026-08-07T08:31:25+08:00",
+    "createdAt": "2026-08-07T08:31:25+08:00"
   }
 ]
