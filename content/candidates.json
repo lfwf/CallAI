@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07T00:31:25.793Z",
+  "updatedAt": "2026-08-08T02:40:12.749Z",
   "candidates": [
     {
       "id": "austin-ai-film-festival-2026",
@@ -60,6 +60,21 @@
       "priority": "normal",
       "reviewNote": "FilmFreeway 官方赛事页确认全球 18 岁以上创作者、1–10 分钟 AI 短片、至少 50% 视听内容由 AI 生成或处理、2500 美元奖池及 2026-09-17 线下展映；但规则正文写常规截止 8 月 15 日，日期表又列 8 月 27 日延长截止，且均无精确时刻和时区，暂不进入正式库。",
       "lastCheckedAt": "2026-08-07T00:31:25.793Z"
+    },
+    {
+      "id": "amd-ai-3d-innovation-2026",
+      "title": "“AMD 杯”AI+3D 创新应用大赛",
+      "discoveredAt": "2026-08-08T02:40:12.749Z",
+      "discoveredFrom": "https://3ddl-oss.oss-cn-beijing.aliyuncs.com/2026/3dds/2026amd.pdf",
+      "officialUrl": "https://3dshow.3ddl.net/i/AMD",
+      "sourceUrl": "https://3ddl-oss.oss-cn-beijing.aliyuncs.com/2026/3dds/2026amd.pdf",
+      "organizer": "全国三维数字化创新设计大赛组委会等",
+      "deadline": "",
+      "status": "needs-source",
+      "confidence": "pending",
+      "priority": "high",
+      "reviewNote": "组委会官方通知确认本科、高职高专、研究生和青少年组，2–5 名选手组队；作品必须使用 AI，可提交视频、3D 模型或应用，龙鼎大奖含 2 万元奖金及 3 台 AIPC 使用权；初赛作品提交截至 2026-08-23，但未公布精确截止时刻，暂不进入正式库。",
+      "lastCheckedAt": "2026-08-08T02:40:12.749Z"
     }
   ]
 }
