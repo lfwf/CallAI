@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T02:40:12.749Z",
+  "updatedAt": "2026-08-13T00:32:18.776Z",
   "candidates": [
     {
       "id": "austin-ai-film-festival-2026",
@@ -75,6 +75,21 @@
       "priority": "high",
       "reviewNote": "组委会官方通知确认本科、高职高专、研究生和青少年组，2–5 名选手组队；作品必须使用 AI，可提交视频、3D 模型或应用，龙鼎大奖含 2 万元奖金及 3 台 AIPC 使用权；初赛作品提交截至 2026-08-23，但未公布精确截止时刻，暂不进入正式库。",
       "lastCheckedAt": "2026-08-08T02:40:12.749Z"
+    },
+    {
+      "id": "volthacks-2026",
+      "title": "VoltHacks 2026",
+      "discoveredAt": "2026-08-13T00:32:17.982Z",
+      "discoveredFrom": "https://volthacks.devpost.com/",
+      "officialUrl": "https://volthacks.devpost.com/",
+      "sourceUrl": "https://volthacks.devpost.com/rules",
+      "organizer": "VoltHacks",
+      "deadline": "2026-09-05T17:00:00-04:00",
+      "status": "needs-source",
+      "confidence": "pending",
+      "priority": "normal",
+      "reviewNote": "Devpost 官方页确认全球 13 岁以上学生、可个人或组队、AI+硬件/IoT/机器人等方向、作品说明与演示材料，以及 2026-09-05 17:00 EDT 截止；但页面奖池汇总与规则正文奖项金额冲突，且开放时间只写 5 月底，需进一步核验后再发布。",
+      "lastCheckedAt": "2026-08-13T00:32:18.776Z"
     }
   ]
 }
