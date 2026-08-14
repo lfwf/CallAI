@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-13T00:32:18.776Z",
+  "updatedAt": "2026-08-14T00:31:36.867Z",
   "candidates": [
     {
       "id": "austin-ai-film-festival-2026",
@@ -90,6 +90,21 @@
       "priority": "normal",
       "reviewNote": "Devpost 官方页确认全球 13 岁以上学生、可个人或组队、AI+硬件/IoT/机器人等方向、作品说明与演示材料，以及 2026-09-05 17:00 EDT 截止；但页面奖池汇总与规则正文奖项金额冲突，且开放时间只写 5 月底，需进一步核验后再发布。",
       "lastCheckedAt": "2026-08-13T00:32:18.776Z"
+    },
+    {
+      "id": "hack-for-humanity-summer-2026",
+      "title": "Hack for Humanity Summer 2026",
+      "discoveredAt": "2026-08-14T00:31:36.086Z",
+      "discoveredFrom": "https://hack-for-humanity-summer-26.devpost.com/",
+      "officialUrl": "https://hack-for-humanity-summer-26.devpost.com/",
+      "sourceUrl": "https://hack-for-humanity-summer-26.devpost.com/rules",
+      "organizer": "Hack for Humanity",
+      "deadline": "2026-09-04T23:45:00-04:00",
+      "status": "needs-source",
+      "confidence": "pending",
+      "priority": "high",
+      "reviewNote": "Devpost 官方页确认全球 13 岁以上、个人或 2–4 人团队，提交改善身心健康的软件源码与最长 4 分钟演示视频，并设 Best Use of AI/ML、Responsible AI 等赛道与明确奖项；概览将截止标为 2026-09-04 23:45 EDT，但规则页同时声明全部时间为 EST，时区表述冲突，暂不进入正式库。",
+      "lastCheckedAt": "2026-08-14T00:31:36.866Z"
     }
   ]
 }
