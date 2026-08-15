@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-14T00:31:36.867Z",
+  "updatedAt": "2026-08-15T00:32:00.823Z",
   "candidates": [
     {
       "id": "austin-ai-film-festival-2026",
@@ -105,6 +105,21 @@
       "priority": "high",
       "reviewNote": "Devpost 官方页确认全球 13 岁以上、个人或 2–4 人团队，提交改善身心健康的软件源码与最长 4 分钟演示视频，并设 Best Use of AI/ML、Responsible AI 等赛道与明确奖项；概览将截止标为 2026-09-04 23:45 EDT，但规则页同时声明全部时间为 EST，时区表述冲突，暂不进入正式库。",
       "lastCheckedAt": "2026-08-14T00:31:36.866Z"
+    },
+    {
+      "id": "call-e-your-code-is-calling-2026",
+      "title": "CALL-E: Your Code Is Calling",
+      "discoveredAt": "2026-08-15T00:32:00.027Z",
+      "discoveredFrom": "https://call-e.devpost.com/",
+      "officialUrl": "https://call-e.devpost.com/",
+      "sourceUrl": "https://call-e.devpost.com/rules",
+      "organizer": "AIRUDDER Pte Ltd / CALL-E",
+      "deadline": "2026-09-14T23:45:00+08:00",
+      "status": "needs-source",
+      "confidence": "pending",
+      "priority": "high",
+      "reviewNote": "Devpost 官方页确认面向达到居住地成年年龄的全球个人、团队及机构，须使用 CALL-E API/SDK/MCP/Skill 构建可运行电话 AI 代理，提交公开 PR、英文说明与约 3 分钟演示视频，总现金奖 1 万美元；但概览写 2026-09-14 23:45 SGT，正式规则写同日 11:45 SGT，截止时刻冲突，暂不进入正式库。",
+      "lastCheckedAt": "2026-08-15T00:32:00.822Z"
     }
   ]
 }
