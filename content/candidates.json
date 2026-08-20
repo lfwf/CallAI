@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15T00:32:00.823Z",
+  "updatedAt": "2026-08-19T16:10:30.789Z",
   "candidates": [
     {
       "id": "austin-ai-film-festival-2026",
@@ -120,6 +120,36 @@
       "priority": "high",
       "reviewNote": "Devpost 官方页确认面向达到居住地成年年龄的全球个人、团队及机构，须使用 CALL-E API/SDK/MCP/Skill 构建可运行电话 AI 代理，提交公开 PR、英文说明与约 3 分钟演示视频，总现金奖 1 万美元；但概览写 2026-09-14 23:45 SGT，正式规则写同日 11:45 SGT，截止时刻冲突，暂不进入正式库。",
       "lastCheckedAt": "2026-08-15T00:32:00.822Z"
+    },
+    {
+      "id": "ai-international-film-festival-october-2026",
+      "title": "AI International Film Festival · October 2026",
+      "discoveredAt": "2026-08-16T00:31:00.000Z",
+      "discoveredFrom": "https://filmfreeway.com/AIinternationalFilmFestival",
+      "officialUrl": "https://filmfreeway.com/AIinternationalFilmFestival",
+      "sourceUrl": "https://filmfreeway.com/AIinternationalFilmFestival",
+      "organizer": "AI International Film Festival",
+      "deadline": "",
+      "status": "needs-source",
+      "confidence": "pending",
+      "priority": "normal",
+      "reviewNote": "FilmFreeway 官方赛事页确认本轮 2026-07-24 开放、2026-08-21 常规截止、2026-08-27 通知及 2026-10-10 活动，征集 AI 电影、动画、音乐视频、游戏视频及声音等 53 个类别；页面列出分类奖项与付费标准，但未公布精确截止时刻和时区，暂不进入正式库。",
+      "lastCheckedAt": "2026-08-16T00:31:00.000Z"
+    },
+    {
+      "id": "agentic-cinema-blockbuster-hackathon-2026",
+      "title": "Agentic Cinema: The Blockbuster Hackathon",
+      "discoveredAt": "2026-08-19T16:10:30.789Z",
+      "discoveredFrom": "https://agentic-cinema.devpost.com/",
+      "officialUrl": "https://agentic-cinema.devpost.com/",
+      "sourceUrl": "https://agentic-cinema.devpost.com/rules",
+      "organizer": "Google Cloud / Devpost",
+      "deadline": "",
+      "status": "needs-source",
+      "confidence": "pending",
+      "priority": "high",
+      "reviewNote": "Devpost 官方概览确认面向达到居住地成年年龄的参赛者，须使用 Gemini、Google Cloud Agent Builder 与指定合作伙伴产品构建可运行的媒体娱乐 AI Agent，并提交托管项目、公开开源仓库及 3 分钟演示视频，总现金奖 7.5 万美元；但概览将截止标为 2026-09-09 14:00 PDT，正式规则仍写 2026-09-07 14:00 PT，截止日期冲突，暂不进入正式库。",
+      "lastCheckedAt": "2026-08-19T16:10:30.789Z"
     }
   ]
 }
