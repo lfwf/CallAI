@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T16:10:30.789Z",
+  "updatedAt": "2026-08-21T00:30:33.740Z",
   "candidates": [
     {
       "id": "austin-ai-film-festival-2026",
@@ -150,6 +150,21 @@
       "priority": "high",
       "reviewNote": "Devpost 官方概览确认面向达到居住地成年年龄的参赛者，须使用 Gemini、Google Cloud Agent Builder 与指定合作伙伴产品构建可运行的媒体娱乐 AI Agent，并提交托管项目、公开开源仓库及 3 分钟演示视频，总现金奖 7.5 万美元；但概览将截止标为 2026-09-09 14:00 PDT，正式规则仍写 2026-09-07 14:00 PT，截止日期冲突，暂不进入正式库。",
       "lastCheckedAt": "2026-08-19T16:10:30.789Z"
+    },
+    {
+      "id": "aws-trainium-frontier-competition-2026",
+      "title": "AWS Trainium Frontier Competition",
+      "discoveredAt": "2026-08-21T00:30:33.740Z",
+      "discoveredFrom": "https://trainium-frontier.devpost.com/",
+      "officialUrl": "https://trainium-frontier.devpost.com/",
+      "sourceUrl": "https://trainium-frontier.devpost.com/rules",
+      "organizer": "Amazon Web Services",
+      "deadline": "2026-09-30T23:00:00-07:00",
+      "status": "ready",
+      "confidence": "verified",
+      "priority": "high",
+      "reviewNote": "Devpost 官方赛事页确认这是需注册并经邀请参与的线上赛事，面向达到居住地成年年龄的全球机器学习研究者、系统工程师与 AI Agent 开发者；1–4 人团队须在单颗 Trainium2 芯片和 30 分钟训练预算内提交模型检查点、可复现训练脚本及技术说明。Phase 1 于 2026-09-30 23:00 PDT 截止，前 10 名晋级 Trn2 服务器阶段，总现金奖 4 万美元。事实字段已完整核验，可进入正式库前的编辑审核。",
+      "lastCheckedAt": "2026-08-21T00:30:33.740Z"
     }
   ]
 }
